@@ -12,7 +12,7 @@ namespace ConsoleApp1
 {
     class Program
     {
-        private static int counter;
+        private static int sll;
 
         public static int simple_search(int[] tab, int a)
         {
@@ -25,10 +25,10 @@ namespace ConsoleApp1
 
         public static int simple_search_founder(int[] tab, int a)
         {
-            counter = 0;
+            sll = 0;
             for (int i = 0; i < tab.Length; i++)
             {
-                counter++;
+                sll++;
                 if (tab[i] == a) return i;
 
             }
@@ -54,7 +54,7 @@ namespace ConsoleApp1
                 result = simple_search(tab, looking_Value);
                 long stop = Stopwatch.GetTimestamp();
                 result = simple_search_founder(tab, looking_Value);
-                Console.WriteLine(k + ";" + looking_Value + ";" + result + ";" + (stop - start) + ";" + counter);
+                Console.WriteLine(k + ";" + looking_Value + ";" + result + ";" + (stop - start) + ";" + sll);
             }
 
         }
